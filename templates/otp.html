@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Enter Mobile</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h2>Enter Your Mobile Number</h2>
+        <form action="/otp" method="POST">
+            <input type="text" name="mobile" placeholder="Mobile Number" required>
+            <button type="submit">Get OTP</button>
+        </form>
+    </div>
+</body>
+</html>
