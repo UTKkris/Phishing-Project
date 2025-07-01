@@ -1,9 +1,9 @@
-<!-- index.html -->
+<!-- templates/index.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title> State Bank Of India Online Login</title>
+  <title>State Bank Of India Online Login</title>
   <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
@@ -22,20 +22,32 @@
       <h2>Login to State Bank Of India</h2>
       <p class="alert">⚠️ Username and password are case sensitive.</p>
       <form id="loginForm" action="/login" method="POST">
-    <label for="username">Username:</label>
-    <input type="text" id="username" name="username" placeholder="Enter Username" required>
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" placeholder="Enter Username" required>
 
-    <label for="password">Password:</label>
-    <input type="password" id="password" name="password" placeholder="Enter Password" required>
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" placeholder="Enter Password" required>
 
-    <label for="captcha">Enter CAPTCHA:</label>
-    <input type="text" id="captcha" name="captcha" placeholder="Enter CAPTCHA" required>
+        <label for="captcha">Enter CAPTCHA:</label>
+        <input type="text" id="captcha" name="captcha" placeholder="Enter CAPTCHA" required>
 
-    <button type="submit">Login</button>
-</form>
-    <script src="static/script.js"></script>
+        <div class="buttons">
+          <button type="submit">Login</button>
+          <button type="reset">Reset</button>
+        </div>
+      </form>
+    </section>
+  </main>
 
+  <footer>
+    © 2025 State Bank of India. All Rights Reserved.
+  </footer>
 
+  <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
+
+    
 
 
 
