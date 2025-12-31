@@ -2,7 +2,7 @@
 
 This project is a **simulated phishing website clone**, developed for academic and research purposes to understand how phishing attacks are created and deployed by threat actors. The cloned website mimics a real banking interface and is used to study **credential harvesting techniques** and their detection.
 
-⚠️ **Note**: This project is intended strictly for **educational and ethical hacking awareness** It must not be deployed for malicious use.
+
 
 ---
 
